@@ -1,0 +1,40 @@
+.wrapper {
+  width: 80%;
+  margin: auto 0px;
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  width: 40%;
+  height: 500px;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container > img {
+  width: 150px;
+  height: 130px;
+  /* image-rendering: pixelated; */
+}
+
+.container > h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.container > p {
+  height: 66px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #607086;
+  line-height: 1.5;
+}

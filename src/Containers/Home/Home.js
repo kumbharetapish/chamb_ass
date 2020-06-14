@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import Axios from "axios";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import home_css from "./Home.module.css";
 import ProductCards from "../../Components/Cards/ProductCards";
-import CarouselCards from "../../Components/Cards/CarouselCards";
+import CarouselCards from "../../Components/CarouselCard/CarouselCards";
 import Boxcard from "../../Components/Boxcard/Boxcard";
 import ExitingProducts from "../../Components/exitingProducts/ExitingProducts";
+import Supplier from "../../Components/Supplier/Supplier";
 
 class Home extends Component {
   constructor(props) {
@@ -36,11 +41,6 @@ class Home extends Component {
         });
       })
       .catch((err) => {
-        console.log(
-          JSON.parse(localStorage.getItem("dataWeb")).landingSection,
-          err
-        );
-
         this.setState({
           ...this.state,
           cardData: JSON.parse(localStorage.getItem("dataWeb")).landingSection,
@@ -48,6 +48,9 @@ class Home extends Component {
             .carouselCards,
         });
       });
+
+      console.log( this.props.productData );
+      
   }
 
   render() {
@@ -58,8 +61,56 @@ class Home extends Component {
       <CarouselCards data={el} />
     ));
 
+    const settings = {
+      dots: false,
+      infinite: true,
+      slidesToShow: 4.5,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 5000,
+      autoplaySpeed: 2000,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
     return (
       <div className={home_css.container}>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+
         <div className={home_css.main_container}>
           <div className={home_css.wrapper}>
             <div className={home_css.headWrapper}>
@@ -93,16 +144,23 @@ class Home extends Component {
         <div className={home_css.exciting_box}>
           <ExitingProducts />
         </div>
+        <div className={home_css.SupplierWrapper}>
+          <Supplier />
+        </div>
 
-        <div>{carouselCards} </div>
+        <div className={home_css.carouselWrapper}>
+          <h2> TRENDING PRODUCTS ON CHAMB</h2>
+          <Slider {...settings}>{carouselCards}</Slider>
+        </div>
       </div>
     );
   }
 }
 
-// import { connect } from "react-redux";
-// function mapStateToProps(state) {
-//   return {};
-// }
-// export default connect(mapStateToProps)(Home);
-export default Home;
+function mapStateToProps(state) {
+  return {
+    productData: state.productData,
+  };
+}
+
+export default connect(mapStateToProps)(Home);

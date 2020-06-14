@@ -73,7 +73,7 @@
   align-items: center;
 }
 
-.navWrapper > div {
+.navWrapper > .linkWrapper {
   width: calc(100% - 0.3px);
   height: 45px;
   display: flex;
@@ -82,7 +82,7 @@
   border-right: solid #e9e9e9 0.3px;
 }
 
-.navWrapper > div > a {
+.navWrapper > linkWrapper > a {
   height: 40px;
   width: 45%;
   display: flex;
@@ -140,4 +140,92 @@
 .btnWrapper > div > .logoutBtn:hover {
   background-color: #337ab7;
   transition: ease all 0.5s;
+}
+.sideBar,
+.cross {
+  display: none;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 901px) and (-webkit-min-device-pixel-ratio: 1) {
+  .sideBar,
+  .cross {
+    display: flex;
+    cursor: pointer;
+    width: 80%;
+    padding: 32px;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .Containers {
+    height: 150px;
+    justify-content: flex-start;
+    overflow: unset;
+  }
+  .overflow {
+    overflow: hidden;
+  }
+  .navWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #09294c;
+    left: 100%;
+    z-index: 4;
+    transition: ease-in-out left 1s;
+  }
+
+  .navWrapper > .linkWrapper {
+    flex-direction: column;
+    color: #fff;
+    width: 80%;
+    padding: 32px;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .navWrapper >.linkWrapper > a {
+    color: #fff;
+    padding: 20px;
+  }
+
+  .slider {
+    display: flex;
+    left: 0%;
+  }
+  .Wrapper {
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 150px;
+  }
+  .logoWrapper {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    border: none;
+  }
+  .searchWrapper {
+    width: 90%;
+    height: 50px;
+    border: none;
+  }
+  .btnWrapper {
+    width: calc(40% - 0.3px);
+    height: 50px;
+  }
+  .cross > i {
+    font: 800;
+    font-size: 25px;
+    color: #ffffff;
+  }
+  .sideBar > i {
+    font: 800;
+    font-size: 25px;
+    color: #09294c;
+  }
 }

@@ -1,0 +1,197 @@
+.cardContainer {
+  display: flex;
+  width: 270px;
+  height: 450px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #07203e;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  transition: ease 1s;
+  position: relative;
+}
+
+.cardFlip {
+  transform: rotateY(90deg);
+  position: absolute;
+}
+.cardContainer > p {
+  margin: 0;
+  position: relative;
+  top: -48px;
+  color: #fff;
+  background-color: green;
+  font-size: 12px;
+  font-weight: 700;
+  width: 100%;
+  height: 15px;
+  text-align: center;
+  padding: 5px 0px;
+}
+.blank {
+  height: 25px;
+  width: 100%;
+}
+.cardWrapper {
+  width: 210px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricingHeader {
+  height: auto;
+  width: 100%;
+  padding-bottom: 20px;
+  pointer-events: auto;
+  text-align: center;
+  color: #173d50;
+  background-color: transparent;
+  border-bottom: 1px solid #09294c;
+}
+
+.pricingHeader > h2 {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 0;
+  font-size: 25px;
+  margin-bottom: 0;
+  line-height: 33px;
+}
+.pricingHeader > p {
+  color: #fff;
+  margin: 0px;
+}
+
+.section-pricing h2 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 56px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.section-pricing .lead {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.pricingBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pricingBody .pricingFeatures {
+  display: block;
+  min-height: 190px;
+  margin: 0;
+  padding: 0px;
+}
+
+.pricingBody .pricingFeatures li {
+  color: #fff;
+  display: block;
+  margin: 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 27px;
+  padding: 0px;
+  font-weight: 300;
+}
+
+.pricingBody .select {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  background-color: #1e96ff;
+  border-radius: 3px;
+  line-height: 45px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.pricingBody .select:hover {
+  color: #fff;
+  background-color: #007dea;
+  border-color: #0077e0;
+}
+
+.plan_price {
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+.plan_price .small {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.popular {
+  position: absolute;
+  height: 28px;
+  background-color: green;
+  top: -28px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #fff;
+}
+
+.pricing-f h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 70px;
+  margin-bottom: 65px;
+  color: #fff;
+}
+
+.feature {
+  margin-bottom: 110px;
+}
+
+.feature_icon {
+  height: 75px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 22px;
+  color: #fff;
+}
+
+.feature p {
+  color: #90a7c2 !important;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 901px) and (-webkit-min-device-pixel-ratio: 1) {
+  .cardContainer {
+    width: 400px;
+    height: 450px;
+  }
+
+  .cardWrapper {
+    width: 300px;
+  }
+}

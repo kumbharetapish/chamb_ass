@@ -11,7 +11,7 @@ class ExitingProducts extends Component {
         {
           name: "Explore exciting and exotic products tailored to you.",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perferendis doloribus assumenda a quidem illum? Non dolor cupiditate quasi corporis. Laborum velit officia neque eligendi voluptatibus! Excepturi quos autem eligendi!",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perferendis doloribus assumenda a quidem illum? Non dolor cupiditate quasi corporis. Laborum velit officia neque eligendi voluptatibus!",
           preview_image: img1,
         },
 
@@ -36,7 +36,7 @@ class ExitingProducts extends Component {
           <h1> {this.state.cardData[0].name}</h1>
           <p>{this.state.cardData[0].description}</p>
         </div>
-        <div></div>
+        <samp></samp>
         <div className={exitingProducts_css.container}>
           <img
             src={this.state.cardData[1].preview_image}

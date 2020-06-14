@@ -1,0 +1,148 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.right_box {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right_box > span {
+  width: 0.3px;
+  height: 60px;
+  background-color: #e7e7e7;
+}
+.cardContainer {
+  width: 100%;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#111318),
+    to(#1f2126)
+  );
+  background-image: linear-gradient(180deg, #111318 0, #1f2126 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_box {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.left_box > h2 {
+  font-size: 50px;
+  color: #333335;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.left_box > h2 > span {
+  font-weight: 400;
+}
+
+.left_box > p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0px;
+  color: #333335;
+  padding-right: 80px;
+  line-height: 37px;
+  padding-bottom: 20px;
+}
+
+.left_box > .formEmail {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.formEmail > h3 {
+  color: #333335;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.boxEmail {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+}
+
+.boxEmail > input {
+  width: 70%;
+  padding: 0;
+  margin: 5px;
+  background: #ffffff;
+  border: none;
+  border-radius: 2px;
+  height: 40px;
+  padding-left: 21px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.boxEmail > button {
+  background: #0a284c;
+  width: 30%;
+  height: 40px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  padding: 11px 15px;
+  margin: 5px 7px;
+  font-family: "Raleway", sans-serif;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 901px) and (-webkit-min-device-pixel-ratio: 1) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .left_box {
+    width: 70%;
+    align-items: center;
+  }
+  .right_box {
+    flex-direction: column;
+  }
+}

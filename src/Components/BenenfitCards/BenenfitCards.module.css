@@ -57,5 +57,6 @@
   .wrapper {
     width: 80%;
     height: auto;
+    align-items: center;
   }
 }
